@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    width: 375px;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
@@ -29,6 +29,10 @@ main {
     width: 100%;
     margin: auto;
     padding-top: 54px;
+}
+
+.desktop-heroes {
+    display: none;
 }
 
 .text-container {
@@ -84,6 +88,10 @@ h1 {
     border: none;
 }
 
+.download:hover{
+    background-color: #4d97a9c7;
+}
+
 .download span {
     color: #8fe3f9;
     font-size: 16px;
@@ -101,6 +109,10 @@ h1 {
     text-align: center;
     color: #fff;
     border: none;
+}
+
+.what-is-it:hover{
+    background-color: #855fb1d7;
 }
 
 .transition-first {
@@ -283,6 +295,10 @@ footer {
     border: none;
 }
 
+.download-footer:hover{
+    background-color: #855fb1d2;
+}
+
 .download-footer span {
     color: #d9b8ff;
 }
@@ -356,5 +372,92 @@ footer {
         width: 573px;
         height: 52px;
         font-size: 18px;
+    }
+}
+
+
+@media screen and (min-width:1440px) {
+    .image-hero {
+        display: none;
+    }
+
+    .desktop-heroes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .hero-left {
+        transform: translateX(-32px);
+    }
+
+    .hero-right {
+        transform: translateX(32px);
+
+    }
+
+    .text-container {
+        position: relative;
+        bottom: 240px;
+    }
+
+    h1 {
+        margin: auto;
+    }
+
+    .group-chat {
+        width: 540px;
+        margin: 30px auto 0;
+    }
+
+    .transition-first {
+        margin-top: -220px;
+    }
+
+    .img-container img {
+        width: 255px;
+        height: 242px;
+        margin: 0 30px 0 0;
+    }
+
+    footer {
+        height: 308px;
+        background-image: url('../desktop/image-footer.jpg');
+    }
+
+    .footer {
+        height: 308px;
+    }
+
+    .footer-op {
+        height: 308px;
+    }
+
+    .download-footer {
+        margin: 0;
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: row;
+        height: 308px;
+        margin-top: 0;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .footer-header {
+        width: 457px;
+        height: 88px;
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .footer-par {
+        width: 415px;
+        height: 130px;
+        font-size: 18px;
+        text-align: left;
     }
 }
