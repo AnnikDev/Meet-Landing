@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+}
+
 body {
     background-color: #fafafa;
 }
@@ -17,24 +21,26 @@ header {
 }
 
 main {
-    width: 375px;
+    width: 100%;
     margin: auto;
 }
 
 .image-hero {
-    width: 375px;
+    width: 100%;
     margin: auto;
     padding-top: 54px;
 }
 
 .text-container {
-    width: 375px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     width: 375px;
     height: 88px;
-    margin: 48px 24px 24px;
+    margin: 48px auto;
     font-size: 40px;
     font-weight: 900;
     font-stretch: normal;
@@ -48,7 +54,7 @@ h1 {
 .group-chat {
     width: 327px;
     height: 78px;
-    margin: 24px 24px 32px;
+    margin: 24px auto;
     font-size: 16px;
     font-weight: 500;
     font-stretch: normal;
@@ -60,7 +66,7 @@ h1 {
 }
 
 .buttons-container {
-    width: 375px;
+    width: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -97,7 +103,7 @@ h1 {
     border: none;
 }
 
-.transition {
+.transition-first {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,6 +137,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
 }
 
 .img-container img {
@@ -172,7 +179,6 @@ h6 {
     font-style: normal;
     line-height: 1.13;
     letter-spacing: normal;
-    text-align: center;
     color: #28283d;
     margin: 24px 0 32px;
 }
@@ -190,16 +196,36 @@ h6 {
     color: #87879d;
 }
 
+.transition-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.line-second {
+    width: 1px;
+    height: 84px;
+    margin: 0 28px 25px 27px;
+    opacity: 0.25;
+    background-color: #87879d;
+}
+
+.second.circle {
+    margin: -25px;
+}
+
 footer {
-    width: 375px;
+    width: 100%;
     background-image: url('../mobile/image-footer.jpg');
-    background-size: 375px;
+    background-size: 100%;
     height: 428px;
     margin-top: -90px;
+    margin: auto;
 }
 
 .footer {
-    width: 375px;
+    width: 100%;
     height: 428px;
     background-color: #4d97a9b6;
     text-align: center;
@@ -226,6 +252,7 @@ footer {
     flex-direction: column;
     height: 304px;
     margin-top: 80px;
+    align-items: center;
 }
 
 .footer-par {
@@ -260,3 +287,74 @@ footer {
     color: #d9b8ff;
 }
 
+@media screen and (min-width:768px) {
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .group-chat {
+        width: 457px;
+    }
+
+    .buttons-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 80px;
+    }
+
+    .download {
+        margin: 0;
+    }
+
+    .what-is-it {
+        margin: 0;
+    }
+
+    .img-container {
+        flex-wrap: nowrap;
+
+    }
+
+    .img-container img {
+        width: 164px;
+        height: 156px;
+        margin: 0 11px 0 0;
+    }
+
+    .second-text-container h2 {
+        width: 445px;
+        height: 88px;
+        font-size: 40px;
+    }
+
+    .meetings {
+        width: 573px;
+        height: 78px;
+    }
+
+    footer {
+        background-image: url('../tablet/image-footer.jpg');
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        height: 304px;
+        margin-top: 80px;
+        align-items: center;
+    }
+
+    .footer-header {
+        width: 457px;
+        height: 88px;
+        font-size: 40px;
+    }
+
+    .footer-par {
+        width: 573px;
+        height: 52px;
+        font-size: 18px;
+    }
+}
